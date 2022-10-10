@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello wasm-pack!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap');
+
+    body {
+      font-family: 'Noto Emoji', sans-serif;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+      line-height: 1;
+      /* padding-bottom: 3rem; */
+    }
+
+    button {
+      padding: 4px 8px;
+      font-size: 16px;
+      height: fit-content;
+      margin: 8px;
+      border: 2px solid #ccc;
+      min-width: 100px;
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    #fps {
+      white-space: pre;
+      font-family: monospace;
+    }
+
+    #speed {
+      width: 80px;
+      margin: 0;
+    }
+  </style>
+  <!-- <script type="module" src="./index.js"></script> -->
+</head>
+
+<body>
+  <div id="fps">fps: - | avg of last 100s: -</div>
+  <div>
+    <button id="play-pause">PLAY</button>
+    <button id="clear">CLEAR</button>
+    <button id="random">RANDOM</button>
+  </div>
+  <canvas id="game-of-life-canvas"></canvas>
+  <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+  <script src="./bootstrap.js"></script>
+</body>
+
+</html>

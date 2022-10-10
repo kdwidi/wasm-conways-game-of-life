@@ -1,19 +1,17 @@
+// #![feature(test)]
+// extern crate test;
+// mod bench;
+pub mod universe;
 mod utils;
 
-use wasm_bindgen::prelude::*;
+#[cfg(test)]
+mod tests {
+    use fixedbitset::FixedBitSet;
 
-// When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
-// allocator.
-#[cfg(feature = "wee_alloc")]
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
-#[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, {{project-name}}!");
+    #[test]
+    fn test() {
+        let mut test = FixedBitSet::with_capacity(16);
+        test.clear();
+        println!("{:#016b}", test);
+    }
 }
