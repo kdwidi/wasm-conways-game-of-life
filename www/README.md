@@ -25,7 +25,6 @@ This is the final web page result of [ Conway's Game of Life Rust and WebAssembl
 
 ### Run
 ```
-cd www/
 npm run start
 ```
 [conways-link]: https://rustwasm.github.io/docs/book/game-of-life/introduction.html
